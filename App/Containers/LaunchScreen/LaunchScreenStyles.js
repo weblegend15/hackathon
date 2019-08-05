@@ -1,5 +1,6 @@
 import { StyleSheet } from 'react-native'
-import { Metrics, ApplicationStyles } from '../../Themes/'
+import { Metrics, ApplicationStyles } from '../../Themes'
+import { position } from 'polished';
 
 export default StyleSheet.create({
   ...ApplicationStyles.screen,
@@ -14,6 +15,12 @@ export default StyleSheet.create({
   },
   backgroundVideo: {
     flex: 1
+  },
+  footer: {
+    flex: 0.1,
+    justifyContent: 'center',
+    flexDirection: 'row',
+    alignItems: 'center'
   },
   logo: {
     marginTop: Metrics.doubleSection,

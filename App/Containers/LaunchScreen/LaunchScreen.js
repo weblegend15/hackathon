@@ -1,17 +1,15 @@
 import React, { Component } from 'react'
 import { ScrollView, Text, View, FlatList } from 'react-native'
 import Video from 'react-native-video';
-import { RNCamera, FaceDetector } from 'react-native-camera'
+import IconButton from '../../Components/IconButton';
 import { Images } from '../../Themes'
-import { TITTLE, DEFAULT_POSTS } from '../../Constants/variables'
+import { TITLE, DEFAULT_POSTS } from '../../Constants/variables'
 import styles from './LaunchScreenStyles'
 
-export default class LaunchScreen extends Component {
+class LaunchScreen extends Component {
   static navigationOptions = {
-    title: TITTLE
-  };
-
-  _keyExtractor = (item, index) => item.id
+    title: TITLE
+  }
 
   _renderItem = item => {
     return (
@@ -22,6 +20,12 @@ export default class LaunchScreen extends Component {
       />
     )
   }
+
+  _turnOnCamera = () => {
+    const { navigation } = this.props
+
+    navigation.push('CameraScreen')
+  }
   
   render () {
     return (
@@ -29,7 +33,17 @@ export default class LaunchScreen extends Component {
         <View style={styles.videosContainer}>
           { DEFAULT_POSTS.map(item => this._renderItem(item)) }
         </View>
+        <View style={styles.footer}>
+          <IconButton
+            name="camera"
+            size={20}
+            color="black"
+            onPressIcon={this._turnOnCamera}
+          />
+        </View>
       </View>
     )
   }
 }
+
+export default LaunchScreen
