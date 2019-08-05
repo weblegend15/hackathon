@@ -6,6 +6,15 @@ export default StyleSheet.create({
   container: {
     paddingBottom: Metrics.baseMargin
   },
+  videosContainer: {
+    flex: 1,
+    flexDirection: 'column',
+    justifyContent: 'center',
+    alignItems: 'stretch',
+  },
+  backgroundVideo: {
+    flex: 1
+  },
   logo: {
     marginTop: Metrics.doubleSection,
     height: Metrics.images.logo,
