@@ -40,7 +40,7 @@ class CameraScreen extends Component {
             onPressIcon={this.takePicture.bind(this)}
           />
         </View>
-      </View>      
+      </View>
     );
   }
 }

@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import { ScrollView, Text, View, FlatList } from 'react-native'
+import { ScrollView, Text, View } from 'react-native'
 import Video from 'react-native-video';
 import IconButton from '../../Components/IconButton';
 import { Images } from '../../Themes'
@@ -29,13 +29,15 @@ class LaunchScreen extends Component {
   
   render () {
     return (
-      <View style={styles.mainContainer}>
-        <View style={styles.videosContainer}>
-          { DEFAULT_POSTS.map(item => this._renderItem(item)) }
-        </View>
+      <View style={styles.mainContainer} >
+        <ScrollView contentContainerStyle={styles.contentContainer}>
+          <View style={styles.videosContainer}>
+            { DEFAULT_POSTS.map(item => this._renderItem(item)) }
+          </View>
+        </ScrollView>
         <View style={styles.footer}>
           <IconButton
-            name="camera"
+            name="plus-square-o"
             size={20}
             color="black"
             onPressIcon={this._turnOnCamera}
