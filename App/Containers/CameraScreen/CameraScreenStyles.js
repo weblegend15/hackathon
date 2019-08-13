@@ -7,7 +7,7 @@ export default StyleSheet.create({
   container: {
     flex: 1,
     flexDirection: 'column',
-    backgroundColor: 'black',
+    backgroundColor: 'white',
   },
   preview: {
     flex: 1,
@@ -16,7 +16,7 @@ export default StyleSheet.create({
   },
   capture: {
     flex: 0,
-    backgroundColor: 'black',
+    backgroundColor: 'white',
     padding: 5,
     paddingHorizontal: 10,
     alignSelf: 'center',
@@ -26,5 +26,8 @@ export default StyleSheet.create({
     flex: 0,
     flexDirection: 'row',
     justifyContent: 'center'
+  },
+  backIcon: {
+    marginLeft: 10
   }
 })

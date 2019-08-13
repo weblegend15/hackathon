@@ -4,7 +4,8 @@ import rootSaga from '../Sagas/'
 
 /* ------------- Assemble The Reducers ------------- */
 export const reducers = combineReducers({
-  nav: require('./NavigationRedux').reducer
+  nav: require('./NavigationRedux').reducer,
+  posts: require('./PostRedux').reducer
 })
 
 export default () => {
