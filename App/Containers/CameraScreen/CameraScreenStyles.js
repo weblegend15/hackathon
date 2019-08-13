@@ -1,6 +1,6 @@
 import { StyleSheet } from 'react-native'
 import { Metrics, ApplicationStyles } from '../../Themes'
-import { position } from 'polished';
+import { position } from 'polished'
 
 export default StyleSheet.create({
   ...ApplicationStyles.screen,

@@ -19,6 +19,6 @@ const FRIENDS = [
     name: 'Shaquille O`Neal',
     story: 'Shaquille Rashaun "Shaq" O`Neal, often known mononymously as Kobe, is an American former professional basketball player.'
   }
-];
+]
 
-export default FRIENDS;
+export default FRIENDS

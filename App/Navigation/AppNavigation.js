@@ -8,6 +8,7 @@ import Icon from 'react-native-vector-icons/FontAwesome'
 import LaunchScreen from '../Containers/LaunchScreen'
 import CameraScreen from '../Containers/CameraScreen'
 import FriendsScreen from '../Containers/FriendsScreen'
+import PostShareScreen from '../Containers/PostShareScreen'
 import styles from './Styles/NavigationStyles'
 import Title from '../Constants/variables'
 
@@ -21,19 +22,25 @@ const LaunchNav = createStackNavigator({
       headerStyle: styles.header
     }),
   }
-});
+})
 
 const CameraNav = createStackNavigator({
-  Profile: {
+  Camera: {
     screen: CameraScreen
+  },
+  PostShare: {
+    screen: PostShareScreen
   }
-});
+},{
+    initialRouteName: 'Camera'
+  }
+)
 
 const FriendsNav = createStackNavigator({
   Profile: {
     screen: FriendsScreen
   }
-});
+})
 
 const PrimaryNav = createBottomTabNavigator({
   LaunchScreen: { screen: LaunchNav },
@@ -60,15 +67,15 @@ const PrimaryNav = createBottomTabNavigator({
       switch (routeName) {
         case 'LaunchScreen':
           iconName = 'home'
-          break;
+          break
         case 'CameraScreen':
           iconName = `${focused ? 'plus-square' : 'plus-square-o'}`
-          break;
+          break
         case 'FriendsScreen':
           iconName = `${focused ? 'user' : 'user-o'}`
-          break;
+          break
         default:
-          break;
+          break
       }
 
       return <Icon name={iconName} size={25} backgroundColor={tintColor} />

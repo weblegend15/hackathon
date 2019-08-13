@@ -8,7 +8,6 @@ import {
 import { RNCamera, FaceDetector } from 'react-native-camera'
 import { CAMERA_SCREEN_TITLE } from '../../Constants/variables'
 import IconButton from '../../Components/IconButton'
-
 import styles from './CameraScreenStyles'
 
 class CameraScreen extends Component {
@@ -17,7 +16,8 @@ class CameraScreen extends Component {
 
     this.state = {
       recordOptions: {},
-      recording: false
+      recording: false,
+      videoUrl: ''
     }
   }
 
@@ -33,18 +33,24 @@ class CameraScreen extends Component {
   }
 
   startRecording = async () => {
+    const { navigation } = this.props
+
     this.setState({ recording: true })
     const { uri, codec = "mp4" } = await this.camera.recordAsync()
 
     this.setState({ recording: false, processing: true })
     const type = `video/${codec}`
-
-    console.log(uri)
-    this.setState({ processing: false })
+    this.setState({ processing: false, videoUrl: uri })
   }
 
   stopRecording = () => {
+    const { navigation } = this.props
+
     this.camera.stopRecording()
+    setTimeout(() => {
+      const { videoUrl } = this.state
+      navigation.push('PostShare', { newVideoUrl: videoUrl })
+    }, 500)
   }
 
   renderSwitchButton = () => {

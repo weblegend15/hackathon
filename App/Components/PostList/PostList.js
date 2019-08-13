@@ -1,6 +1,4 @@
 import React, { PureComponent } from 'react'
-import { connect } from 'react-redux';
-import { PostSelectors } from '../../Redux/PostRedux'
 import {
   ScrollView,
   Text,
@@ -10,6 +8,7 @@ import {
 } from 'react-native'
 import Icon from 'react-native-vector-icons/FontAwesome'
 import Video from 'react-native-video'
+import { USER_ID } from '../../Constants/variables'
 import styles from './PostListStyles'
 import Colors from '../../Themes/Colors'
 
@@ -18,13 +17,15 @@ class PostList extends PureComponent {
     const { id, src, title, comment } = post
 
     return (
-      <View key={id}>
+      <View key={id} style={styles.postItem}>
         <View style={styles.userInfo}>
-          <Icon name='user-circle-o' style={styles.avatar} size={20} color={Colors.frost} />
-          <Text>WarrenAnderson4036</Text>
+          <Icon name='user-circle-o' style={styles.avatar} size={20} color={Colors.black} />
+          <Text>{USER_ID}</Text>
         </View>
 
         <Video
+          repeat
+          playWhenInactive
           source={{uri: src}}
           style={styles.backgroundVideo}
         />
@@ -36,44 +37,26 @@ class PostList extends PureComponent {
     )
   }
 
-  renderListLoading = () => (
-    <View>
-      <ActivityIndicator size={'large'} />
-    </View>
-  );
-
   render () {
-    const { postList, isLoading, hasError } = this.props
-
-    if (hasError) {
+    const { postList } = this.props
+    if (!postList.length) {
       return (
-        <View style={styles.container}>
-          <Text>Error fetching postList...</Text>
-        </View>
-      );
+        <SafeAreaView style={styles.emptyPost}>
+          <View style={styles.alert}>
+            <Text>No Post...</Text>
+          </View>
+          <View>
+            <Text>Please record your own videos and share them</Text>
+          </View>
+        </SafeAreaView>
+      )
     }
-
-    if (isLoading) {
-      return this.renderListLoading
-    }
-
     return (
       <SafeAreaView style={styles.videosContainer}>
-        {postList.map( post => this.renderPost(post))}
+        {postList.map(post => this.renderPost(post))}
       </SafeAreaView>
     )
   }
 }
 
-const mapStateToProps = (state) => ({
-  hasError: PostSelectors.selectPostsHasError(state),
-  isLoading: PostSelectors.selectPostsLoading(state),
-  postList: PostSelectors.selectPosts(state)
-});
-
-const mapDispatchToProps = (dispatch) => ({});
-
-export default connect(
-  mapStateToProps,
-  mapDispatchToProps
-)(PostList);
+export default PostList

@@ -1,12 +1,14 @@
 import '../Config'
 import DebugConfig from '../Config/DebugConfig'
 import React, { Component } from 'react'
+import { setGlobal } from 'reactn'
 import { Provider } from 'react-redux'
 import RootContainer from './RootContainer'
 import createStore from '../Redux'
 
 // create our store
 const store = createStore()
+setGlobal({ posts: [] })
 
 class App extends Component {
   render () {

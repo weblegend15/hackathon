@@ -3,7 +3,7 @@ import { Metrics, ApplicationStyles } from '../../Themes'
 import { position } from 'polished'
 import Colors from '../../Themes/Colors'
 
-const width = Dimensions.get('window').width;
+const width = Dimensions.get('window').width
 
 export default StyleSheet.create({
   ...ApplicationStyles.screen,
@@ -11,15 +11,30 @@ export default StyleSheet.create({
     flex: 1,
     backgroundColor: Colors.background
   },
+  postItem: {
+    borderBottomColor: 'grey',
+    borderBottomWidth: 0.2,
+    paddingTop: Metrics.baseMargin,
+    paddingBottom: Metrics.baseMargin
+  },
   backgroundVideo: {
     flex: 1,
-    height: 200
+    height: 500
+  },
+  emptyPost: {
+    flex: 1,
+    justifyContent: 'center',
+    alignItems: 'center'
+  },
+  alert: {
+    marginTop: Metrics.baseMargin,
+    marginBottom: Metrics.baseMargin
   },
   videosContainer: {
     flex: 1,
     flexDirection: 'column',
     justifyContent: 'center',
-    alignItems: 'stretch',
+    alignItems: 'stretch'
   },
   userInfo: {
     flex: 1,
@@ -27,10 +42,10 @@ export default StyleSheet.create({
     flexDirection: 'row'
   },
   avatar: {
-    marginRight: 20
+    marginRight: 10
   },
   comments: {
-    margin: Metrics.baseMargin,
+    margin: Metrics.baseMargin
   },
   title: {
     fontSize: 18

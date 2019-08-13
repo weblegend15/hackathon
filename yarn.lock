@@ -9230,6 +9230,12 @@ reactjs-popup@^1.3.2:
   version "1.4.2"
   resolved "https://registry.yarnpkg.com/reactjs-popup/-/reactjs-popup-1.4.2.tgz#7ef29df2d87e31ffb0a9c6aae909cbd65d786be7"
 
+reactn@^2.1.7:
+  version "2.1.7"
+  resolved "https://registry.yarnpkg.com/reactn/-/reactn-2.1.7.tgz#4ad933d765d7f0a4e527b1bc131e10510d09a8d2"
+  dependencies:
+    use-force-update "^1.0.5"
+
 reactotron-core-client@^2.1.4, reactotron-core-client@^2.2.1, reactotron-core-client@^2.3.0:
   version "2.8.3"
   resolved "https://registry.yarnpkg.com/reactotron-core-client/-/reactotron-core-client-2.8.3.tgz#e8ce782f21ba3c04eb3c678297edceac283857ff"
@@ -10760,6 +10766,10 @@ url@^0.11.0:
   dependencies:
     punycode "1.3.2"
     querystring "0.2.0"
+
+use-force-update@^1.0.5:
+  version "1.0.7"
+  resolved "https://registry.yarnpkg.com/use-force-update/-/use-force-update-1.0.7.tgz#f5e672633f5a398b25c33b2287150918bcb3526b"
 
 use@^3.1.0:
   version "3.1.1"

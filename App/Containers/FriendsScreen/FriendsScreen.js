@@ -12,7 +12,7 @@ import { FRIENDS_SCREEN_TITLE } from '../../Constants/variables'
 import styles from './FriendsScreenStyle'
 import Colors from '../../Themes/Colors'
 
-const { width } = Dimensions.get('window');
+const { width } = Dimensions.get('window')
 
 class FriendsScreen extends Component {
   componentDidMount() {
