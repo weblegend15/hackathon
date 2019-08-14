@@ -8,6 +8,7 @@ import Icon from 'react-native-vector-icons/FontAwesome'
 import LaunchScreen from '../Containers/LaunchScreen'
 import CameraScreen from '../Containers/CameraScreen'
 import FriendsScreen from '../Containers/FriendsScreen'
+import FriendPostsScreen from '../Containers/FriendPostsScreen'
 import PostShareScreen from '../Containers/PostShareScreen'
 import styles from './Styles/NavigationStyles'
 import Title from '../Constants/variables'
@@ -30,8 +31,7 @@ const CameraNav = createStackNavigator({
   },
   PostShare: {
     screen: PostShareScreen
-  }
-},{
+  }}, {
     initialRouteName: 'Camera'
   }
 )
@@ -39,8 +39,13 @@ const CameraNav = createStackNavigator({
 const FriendsNav = createStackNavigator({
   Profile: {
     screen: FriendsScreen
+  },
+  PostList: {
+    screen: FriendPostsScreen
+  }}, {
+    initialRouteName: 'Profile'
   }
-})
+)
 
 const PrimaryNav = createBottomTabNavigator({
   LaunchScreen: { screen: LaunchNav },

@@ -8,19 +8,19 @@ import {
 } from 'react-native'
 import Icon from 'react-native-vector-icons/FontAwesome'
 import Video from 'react-native-video'
-import { USER_ID } from '../../Constants/variables'
 import styles from './PostListStyles'
 import Colors from '../../Themes/Colors'
 
 class PostList extends PureComponent {
   renderPost = post => {
-    const { id, src, title, comment } = post
+    const { userName } = this.props
+    const { id, src, comment } = post
 
     return (
       <View key={id} style={styles.postItem}>
         <View style={styles.userInfo}>
           <Icon name='user-circle-o' style={styles.avatar} size={20} color={Colors.black} />
-          <Text>{USER_ID}</Text>
+          <Text>{userName}</Text>
         </View>
 
         <Video
@@ -30,7 +30,6 @@ class PostList extends PureComponent {
           style={styles.backgroundVideo}
         />
         <View style={styles.comments}>
-          <Text style={styles.title}>{title}</Text>
           <Text style={styles.content}>{comment}</Text>
         </View>
       </View>

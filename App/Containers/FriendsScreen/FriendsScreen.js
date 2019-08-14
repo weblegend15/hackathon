@@ -7,7 +7,7 @@ import {
   Dimensions
 } from 'react-native'
 import Icon from 'react-native-vector-icons/FontAwesome'
-import FRIENDS from '../../Constants/friends'
+import { FRIENDS, FRIENDS_POSTS } from '../../Constants/friends'
 import { FRIENDS_SCREEN_TITLE } from '../../Constants/variables'
 import styles from './FriendsScreenStyle'
 import Colors from '../../Themes/Colors'
@@ -23,8 +23,11 @@ class FriendsScreen extends Component {
     title: FRIENDS_SCREEN_TITLE
   }
 
-  visitYourFriendPost = id => () => {
-    console.log(id)
+  visitYourFriendPost = friend => () => {
+    const { id, name } = friend
+    const { navigation } = this.props
+
+    navigation.push('PostList', { postList: FRIENDS_POSTS[id - 1], userName: name })
   }
 
   renderFriend = friend => {
@@ -34,7 +37,7 @@ class FriendsScreen extends Component {
       <TouchableOpacity
         key={id}
         style={styles.friendCard}
-        onPress={this.visitYourFriendPost(id)}
+        onPress={this.visitYourFriendPost(friend)}
       >
         <Icon name='user-circle-o' size={70} color={Colors.frost} />
         <View style={styles.friendName}>

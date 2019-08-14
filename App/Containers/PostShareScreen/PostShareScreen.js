@@ -14,12 +14,12 @@ import IconButton from '../../Components/IconButton'
 import reactn, { setGlobal } from 'reactn'
 import styles from './PostShareScreenStyles'
 
-import { StackActions, NavigationActions } from 'react-navigation';
+import { StackActions, NavigationActions } from 'react-navigation'
 
 const resetAction = StackActions.reset({
   index: 0,
   actions: [NavigationActions.navigate({ routeName: 'Camera' })],
-});
+})
 
 const PostShareScreen = ({ navigation }) => {
   const [comment, setComment] = useState('')
