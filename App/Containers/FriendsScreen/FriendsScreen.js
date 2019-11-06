@@ -16,7 +16,7 @@ const { width } = Dimensions.get('window')
 
 class FriendsScreen extends Component {
   componentDidMount() {
-		setTimeout(() => {this.scrollView.scrollTo({x: -40}) }, 1)
+		setTimeout(() => { this.scrollView.scrollTo({ x: -40 }) }, 1)
   }
 
   static navigationOptions = {

@@ -7,6 +7,12 @@ import StartupActions from '../../Redux/StartupRedux'
 // Styles
 import styles from './RootContainerStyles'
 
+
+const MyStatusBar = ({backgroundColor, ...props}) => (
+  <View style={[styles.statusBar, { backgroundColor }]}>
+    <StatusBar translucent backgroundColor={backgroundColor} {...props} />
+  </View>
+);
 class RootContainer extends Component {
   componentDidMount () {
     this.props.startup()
@@ -15,7 +21,7 @@ class RootContainer extends Component {
   render () {
     return (
       <View style={styles.applicationView}>
-        <StatusBar barStyle={'dark-content'} /> 
+        <MyStatusBar backgroundColor="#121212" barStyle="light-content" />
         <ReduxNavigation />
       </View>
     )

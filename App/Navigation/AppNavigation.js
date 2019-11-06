@@ -1,8 +1,7 @@
 import React from 'react'
 import {
   createStackNavigator,
-  createBottomTabNavigator,
-  createAppContainer
+  createBottomTabNavigator
 } from 'react-navigation'
 import Icon from 'react-native-vector-icons/FontAwesome'
 import LaunchScreen from '../Containers/LaunchScreen'
@@ -19,8 +18,17 @@ const LaunchNav = createStackNavigator({
   Profile: {
     screen: LaunchScreen,
     navigationOptions: ({ navigation }) => ({
-      title: `Hackathon`,
-      headerStyle: styles.header
+      title: `Real`,
+      headerTintColor: 'white',
+      drawerLabel: 'Profile',
+      headerStyle: styles.header,
+      headerTitleStyle: styles.headerTitleStyle,
+      headerLeft: (
+        <Icon name={'plus-circle'} size={25} style={styles.navbarLeftIcon} />
+      ),
+      headerRight: (
+        <Icon name={'comment-o'} size={25} style={styles.navbarRightIcon} />
+      )
     }),
   }
 })
@@ -63,6 +71,8 @@ const PrimaryNav = createBottomTabNavigator({
     tabBarOptions: {
       showLabel: false,
       showIcon: true,
+      labelStyle: styles.bottomNavbarFontStyle,
+      style: styles.bottomNavbar
     },
     tabBarIcon: ({ focused, tintColor }) => {
       const { routeName } = navigation.state
@@ -83,7 +93,11 @@ const PrimaryNav = createBottomTabNavigator({
           break
       }
 
-      return <Icon name={iconName} size={25} backgroundColor={tintColor} />
+      return <Icon
+              name={iconName}
+              size={25}
+              backgroundColor={tintColor}
+              style={styles.bottomNavbarFontStyle} />
     },
   }),
   tabBarOptions: {
@@ -92,4 +106,4 @@ const PrimaryNav = createBottomTabNavigator({
   },
 })
 
-export default createAppContainer(PrimaryNav)
+export default PrimaryNav

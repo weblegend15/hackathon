@@ -8,7 +8,7 @@ import createStore from '../Redux'
 
 // create our store
 const store = createStore()
-setGlobal({ posts: [] })
+setGlobal({ posts: [], userId: 1 })
 
 class App extends Component {
   render () {

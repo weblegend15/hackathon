@@ -1,9 +1,14 @@
-import {StyleSheet} from 'react-native'
+import {StyleSheet, Platform, StatusBar} from 'react-native'
 import {Fonts, Metrics, Colors} from '../../Themes'
+
+const STATUSBAR_HEIGHT = Platform.OS === 'ios' ? 25 : StatusBar.currentHeight;
 
 export default StyleSheet.create({
   applicationView: {
     flex: 1
+  },
+  statusBar: {
+    height: STATUSBAR_HEIGHT,
   },
   container: {
     flex: 1,
