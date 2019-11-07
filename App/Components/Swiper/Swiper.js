@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import { View, Text, Button } from 'react-native'
 import Swiper from 'react-native-deck-swiper'
+import Video from 'react-native-video'
 import styles from './SwiperStyles'
 
 const SwiperView = ({cards, currentCountOfLikes}) => {
@@ -17,7 +18,12 @@ const SwiperView = ({cards, currentCountOfLikes}) => {
       cards={cards}
       renderCard={card => (
         <View style={styles.card}>
-          <Text style={styles.text}>{card.name}</Text>
+          <Video
+            repeat
+            playWhenInactive
+            source={{uri: card.src}}
+            style={styles.backgroundVideo}
+          />
         </View>
       )}
       infinite

@@ -64,49 +64,49 @@ const FRIENDS_CARDS = [
   {
     id: 1,
     cards: [
-      { like: 6, name: 'DO' },
-      { like: 3, name: 'MORE' },
-      { like: 0, name: 'BAD' },
-      { like: 0, name: 'WHAT' },
-      { like: 2, name: 'MAKES'},
-      { like: 1, name:'YOU'},
-      { like: 2, name: 'HAPPY' }
+      { like: 6, src: 'https://file-examples.com/wp-content/uploads/2017/04/file_example_MP4_480_1_5MG.mp4' },
+      { like: 3, src: 'https://file-examples.com/wp-content/uploads/2017/04/file_example_MP4_480_1_5MG.mp4' },
+      { like: 0, src: 'https://file-examples.com/wp-content/uploads/2017/04/file_example_MP4_480_1_5MG.mp4' },
+      { like: 0, src: 'https://file-examples.com/wp-content/uploads/2017/04/file_example_MP4_480_1_5MG.mp4' },
+      { like: 2, src: 'https://file-examples.com/wp-content/uploads/2017/04/file_example_MP4_480_1_5MG.mp4' },
+      { like: 1, src: 'https://file-examples.com/wp-content/uploads/2017/04/file_example_MP4_480_1_5MG.mp4' },
+      { like: 2, src: 'https://file-examples.com/wp-content/uploads/2017/04/file_example_MP4_480_1_5MG.mp4' }
     ]
   },
   {
     id: 2,
     cards: [
-      { like: 3, name: 'GOOD' },
-      { like: 5, name: 'NICE' },
-      { like: 2, name: 'SUPER' },
-      { like: 5, name: 'STAR' },
-      { like: 6, name: 'Brilliant'},
-      { like: 8, name:'LIKE'},
-      { like: 0, name: 'UNLIKE' }
+      { like: 3, src: 'https://file-examples.com/wp-content/uploads/2017/04/file_example_MP4_480_1_5MG.mp4' },
+      { like: 5, src: 'https://file-examples.com/wp-content/uploads/2017/04/file_example_MP4_480_1_5MG.mp4' },
+      { like: 2, src: 'https://file-examples.com/wp-content/uploads/2017/04/file_example_MP4_480_1_5MG.mp4' },
+      { like: 5, src: 'https://file-examples.com/wp-content/uploads/2017/04/file_example_MP4_480_1_5MG.mp4' },
+      { like: 6, src: 'https://file-examples.com/wp-content/uploads/2017/04/file_example_MP4_480_1_5MG.mp4' },
+      { like: 8, src: 'https://file-examples.com/wp-content/uploads/2017/04/file_example_MP4_480_1_5MG.mp4' },
+      { like: 0, src: 'https://file-examples.com/wp-content/uploads/2017/04/file_example_MP4_480_1_5MG.mp4' }
     ]
   },
   {
     id: 3,
     cards: [
-      { like: 6, name: 'DO' },
-      { like: 3, name: 'MORE' },
-      { like: 0, name: 'BAD' },
-      { like: 0, name: 'WHAT' },
-      { like: 2, name: 'MAKES'},
-      { like: 1, name:'YOU'},
-      { like: 2, name: 'HAPPY' }
+      { like: 6, src: 'https://file-examples.com/wp-content/uploads/2017/04/file_example_MP4_480_1_5MG.mp4' },
+      { like: 3, src: 'https://file-examples.com/wp-content/uploads/2017/04/file_example_MP4_480_1_5MG.mp4' },
+      { like: 0, src: 'https://file-examples.com/wp-content/uploads/2017/04/file_example_MP4_480_1_5MG.mp4' },
+      { like: 0, src: 'https://file-examples.com/wp-content/uploads/2017/04/file_example_MP4_480_1_5MG.mp4' },
+      { like: 2, src: 'https://file-examples.com/wp-content/uploads/2017/04/file_example_MP4_480_1_5MG.mp4' },
+      { like: 1, src: 'https://file-examples.com/wp-content/uploads/2017/04/file_example_MP4_480_1_5MG.mp4' },
+      { like: 2, src: 'https://file-examples.com/wp-content/uploads/2017/04/file_example_MP4_480_1_5MG.mp4' }
     ]
   },
   {
     id: 4,
     cards: [
-      { like: 3, name: 'GOOD' },
-      { like: 5, name: 'NICE' },
-      { like: 2, name: 'SUPER' },
-      { like: 5, name: 'STAR' },
-      { like: 6, name: 'Brilliant'},
-      { like: 8, name:'LIKE'},
-      { like: 0, name: 'UNLIKE' }
+      { like: 3, src: 'https://file-examples.com/wp-content/uploads/2017/04/file_example_MP4_480_1_5MG.mp4' },
+      { like: 5, src: 'https://file-examples.com/wp-content/uploads/2017/04/file_example_MP4_480_1_5MG.mp4' },
+      { like: 2, src: 'https://file-examples.com/wp-content/uploads/2017/04/file_example_MP4_480_1_5MG.mp4' },
+      { like: 5, src: 'https://file-examples.com/wp-content/uploads/2017/04/file_example_MP4_480_1_5MG.mp4' },
+      { like: 6, src: 'https://file-examples.com/wp-content/uploads/2017/04/file_example_MP4_480_1_5MG.mp4' },
+      { like: 8, src: 'https://file-examples.com/wp-content/uploads/2017/04/file_example_MP4_480_1_5MG.mp4' },
+      { like: 0, src: 'https://file-examples.com/wp-content/uploads/2017/04/file_example_MP4_480_1_5MG.mp4' }
     ]
   }
 ]

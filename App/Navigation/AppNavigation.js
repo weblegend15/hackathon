@@ -18,7 +18,7 @@ const LaunchNav = createStackNavigator({
   Profile: {
     screen: LaunchScreen,
     navigationOptions: ({ navigation }) => ({
-      title: `Real`,
+      title: `REAL`,
       headerTintColor: 'white',
       drawerLabel: 'Profile',
       headerStyle: styles.header,

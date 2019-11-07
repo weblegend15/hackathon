@@ -10,7 +10,7 @@ import styles from './RootContainerStyles'
 
 const MyStatusBar = ({backgroundColor, ...props}) => (
   <View style={[styles.statusBar, { backgroundColor }]}>
-    <StatusBar translucent backgroundColor={backgroundColor} {...props} />
+    
   </View>
 );
 class RootContainer extends Component {
@@ -21,7 +21,7 @@ class RootContainer extends Component {
   render () {
     return (
       <View style={styles.applicationView}>
-        <MyStatusBar backgroundColor="#121212" barStyle="light-content" />
+        <StatusBar translucent  barStyle="light-content"/>
         <ReduxNavigation />
       </View>
     )

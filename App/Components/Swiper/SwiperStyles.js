@@ -12,7 +12,7 @@ export default StyleSheet.create({
     backgroundColor: "#F5FCFF"
   },
   containerStyle: {
-    backgroundColor: 'white'
+    backgroundColor: Colors.darkBlack
   },
   swiperContainer: {
     marginTop: 205,
@@ -21,13 +21,17 @@ export default StyleSheet.create({
   cardContainer: {
     height: 200
   },
+  backgroundVideo: {
+    flex: 1,
+    height: 200
+  },
   card: {
     flex: 1,
     borderRadius: 4,
     borderWidth: 2,
-    borderColor: "#E8E8E8",
+    borderColor: Colors.darkBlack,
     justifyContent: "center",
-    backgroundColor: "white",
+    backgroundColor: Colors.darkBlack,
     height: 200
   },
   text: {

@@ -3,8 +3,8 @@ import { Colors } from '../../Themes/'
 
 export default StyleSheet.create({
   header: {
-    borderTopColor: Colors.snow,
-    borderTopWidth: 0.3,
+    borderBottomColor: Colors.snow,
+    borderBottomWidth: 0.3,
     borderBottomWidth: 0,
     color: Colors.snow,
     backgroundColor: Colors.darkBlack,
